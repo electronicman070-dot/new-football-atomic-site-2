@@ -1,0 +1,133 @@
+document.getElementById("modalTitle").innerText =
+"ثبت شد";
+
+document.getElementById("modalText").innerText =
+"عدم حضور شما ثبت شد. ممنون که اطلاع دادید.";
+
+document.getElementById("modal").style.display =
+"flex";
+
+}
+
+
+function closeModal(){
+
+document.getElementById("modal").style.display =
+"none";
+
+}
+
+
+function submitPayment(){
+
+let name =
+document.getElementById("name").value;
+
+let tracking =
+document.getElementById("tracking").value;
+
+let receipt =
+document.getElementById("receipt").files.length;
+
+if(
+name === "" ||
+tracking === "" ||
+receipt === 0
+){
+
+document.getElementById("paymentResult").innerText =
+"لطفاً نام، کد پیگیری و رسید را وارد کنید.";
+
+document.getElementById("paymentResult").style.color =
+"#ff6680";
+
+return;
+
+}
+
+document.getElementById("paymentResult").innerText =
+"رسید پرداخت شما ثبت شد ✓";
+
+document.getElementById("paymentResult").style.color =
+"#20e99a";
+
+}
+
+
+function sendMessage(){
+
+let name =
+document.getElementById("sender").value;
+
+let message =
+document.getElementById("messageText").value;
+
+if(
+name === "" ||
+message === ""
+){
+
+alert("لطفاً نام و پیام را وارد کنید.");
+
+return;
+
+}
+
+document.getElementById("messageSuccess").style.display =
+"block";
+
+document.getElementById("messageText").value =
+"";
+
+}
+
+
+function goHome(){
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+}
+
+
+function goPoll(){
+
+document.getElementById("poll").scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+function goPayment(){
+
+document.getElementById("payment").scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+function goPlayers(){
+
+document.getElementById("players").scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+function goGame(){
+
+document.getElementById("game").scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+</script>
+
+</body>
+</html>
